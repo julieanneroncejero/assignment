@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Interest Calculator</title>
+  <style>
+    body {
+        text-align: left;
+        font-family: Arial, sans-serif;
+        background-color: rgb(215, 244, 244);
+        margin: right; 
+        padding-left: 5%; 
+    }
+    form {
+        width: 20%;
+        padding-left: 300;
+    }
+
+    h2 {
+        margin-top: 30px; 
+    }
+    
+</style>
+
+  <script>
+    function calculateSimpleInterest() {
+      const principal = parseFloat(document.getElementById('principal').value);
+      const rate = parseFloat(document.getElementById('rate').value);
+      const time = parseFloat(document.getElementById('time').value);
+
+      const simpleInterest = (principal * rate * time) / 100;
+
+      document.getElementById('result').innerHTML = 'Simple Interest: ' + simpleInterest;
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Javascript Activity</h2>
+
+  <form>
+    <label for="principal">Principal Amount:</label> 
+    <input type="number" id="principal" placeholder="Enter principal amount">
+  </br>
+    <label for="rate">Interest Rate:</label>
+    <input type="number" id="rate" placeholder="Enter interest rate">
+</br>
+    <label for="time">Time Period (in years):</label>
+    <input type="number" id="time" placeholder="Enter time period">
+</br>
+
+    <button type="button" onclick="calculateSimpleInterest()">Calculate</button>
+  </form>
+
+  <div id="result"></div>
+
+</body>
+</html
